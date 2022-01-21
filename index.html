@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Site</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                        </div>
+                        <div class="card-body">
+                                <form id="fiverr">
+                                    <div class="form-group d-inline mr-2">
+                                        <input type="date" id="datee">
+                                    </div>
+                                    <div class="form-group d-inline mr-2">
+                                        <input type="time" id="timee">
+                                    </div>
+                                    <div class="form-group d-inline">
+                                        <input type="submit" class="btn btn-primary" value="creat order">
+                                    </div>
+                                </form>
+                        </div>
+                        <div class="card-footer">
+                            <div class="time_count_div">
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-lg-3">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+                <h2>Age calculator</h2>
+                <div class="agecal p-3">
+                    <form id="age_cal_form" class="d-flex justify-content-between mb-5">
+                        <div class="form-group">
+                            <input id="date2" type="date">
+                        </div>
+                        <div class="form-group">
+                            <input id="time2" type="time">
+                        </div>
+                        <div class="form-group">
+                            <input id="submit2" class="btn btn-success" type="submit" value="Calculate">
+                        </div>
+                    </form>
+                    <hr>
+                    <div class="result_age mt-5">
+                       
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-3"></div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+                <div class="product_with_ls">
+                    <button class="btn btn-primary m-auto d-block mb-3" id="add_product">Add product</button>
+                    <div class="card product_box">
+                        <div class="card-body">
+                            <button id="close_btn" class="close mr-5">&times;</button>
+                            <h3 class="d-inline-block">Add new product</h3>
+                            <form id="add_form">
+                                <div class="form-group m-4">
+                                    <input type="text" class="form-control" placeholder="product name">
+                                </div>
+                                <div class="form-group m-4">
+                                    <input type="text" class="form-control" placeholder="product price">
+                                </div>
+                                <div class="form-group m-4">
+                                    <input type="text" class="form-control" placeholder="sale price">
+                                </div>
+                                <div class="form-group m-4">
+                                    <input type="text" class="form-control" placeholder="product photo link">
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" class="form-control btn btn-primary" value="add new product" placeholder="product photo link">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="col-lg-3"></div>
+        </div>
+        <div class="products">
+            <div id="produ_list" class="row">
+               
+            </div>
+        </div>
+    </div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <div class="form-group d-inline">
+                <input type="text" placeholder="To Do" id="toto_id">
+            </div>
+            <div class="form-group d-inline">
+                <input id="add_todo" type="submit" value="Add" class="btn btn-primary">
+            </div>
+            <div class="basic_todo">
+                <div class="list-group">
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+        </div>
+    </div>
+</div> -->
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<script src="function.js"></script>
+<script src="Bacsic-To-Do-2.js"></script>
+<script src="Product-with-LS.js"></script>
+<script src="age-calculaitor.js"></script>
+<script src="practice.js"></script>
+</body>
+</html>

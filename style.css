@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.time_count_div{
+    font-size: 50px;
+    text-align: center;
+}
+.time_count_div span{
+    vertical-align: middle;
+}
+
+.time_count_div p{
+    font-size: 30px;
+}
+
+.agecal{
+    background-color: #ddd;
+}
+.result_age p{
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.product_box{
+    display: none;
+}
+
+.list-group-item{
+    background-color: #ddd;
+}
+
+.list-group-item button{
+    position: absolute;
+    right: 5%;
+    bottom: 20%;
+}
