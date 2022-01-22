@@ -54,6 +54,10 @@ add_form.addEventListener('submit', function(e){
 
     console.log(product_arr)
     all_data_show()
+    pname = '';
+    prprice = '';
+    psprice = '';
+    pphoto = '';
 
 })
 
