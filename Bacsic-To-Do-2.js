@@ -1,5 +1,5 @@
 
-const add_todo = document.querySelector('#add_todo');
+/* const add_todo = document.querySelector('#add_todo');
 const toto_id = document.querySelector('#toto_id');
 const basic_todo = document.querySelector('.basic_todo .list-group')
 
@@ -18,4 +18,4 @@ add_todo.addEventListener('click', function(){
     button.addEventListener('click', function(){
         basic_todo.removeChild(li)
     })
-})
+}) */
