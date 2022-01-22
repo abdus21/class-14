@@ -67,7 +67,7 @@ add_form.addEventListener('submit', function(e){
 
 
 
-
+all_data_show()
 function all_data_show(){
 
     let productItem = dataget('productss');
