@@ -1,22 +1,11 @@
 
-/**
- * 
- * @param {*} key 
- * @param {*} dataa 
- */
 
-function productsent(key, dataa){
+function datasend(key,value){
+    let data = JSON.stringify(value);
+    localStorage.setItem(key,data)
+};
 
-    let data = JSON.stringify(dataa)
-    localStorage.setItem(key, data)
- }
-
- /**
-  * 
-  * @param {*} data 
-  * @returns 
-  */
- function dataget(data){
-     let datape = localStorage.getItem(data)
-    return JSON.parse(datape)
- }
+function dataget(key){
+    let data = localStorage.getItem(key);
+    return JSON.parse(data)
+}

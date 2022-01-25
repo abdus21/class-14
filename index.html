@@ -75,11 +75,11 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-lg-3"></div>
+            <div class="col-lg-3"></div>  
             <div class="col-lg-6">
                 <div class="product_with_ls">
                     <button class="btn btn-primary m-auto d-block mb-3" id="add_product">Add product</button>
-                    <div class="card product_box">
+                    <div style="" class="card product_box">
                         <div class="card-body">
                             <button id="close_btn" class="close mr-5">&times;</button>
                             <h3 class="d-inline-block">Add new product</h3>
@@ -93,12 +93,21 @@
                                 <div class="form-group m-4">
                                     <input name="sale_price" type="text" class="form-control" placeholder="sale price">
                                 </div>
-                                <div class="form-group m-4">
+                                <div class="form-group m-3">
                                     <input name="photolink" type="text" class="form-control" placeholder="product photo link">
+                                </div>
+                                <div class="form-group mb-4">
+                                   <select class="form-control" name="" id="select">
+                                     <option>--select--</option>
+                                     <option  value="Available">Available</option>
+                                     <option value="out of stock">out of stock</option>
+                                     <option value="Beast sale">Beast sale</option>
+                                   </select>
                                 </div>
                                 <div class="form-group">
                                     <input type="submit" class="form-control btn btn-primary" value="add new product" placeholder="product photo link">
                                 </div>
+                               
                             </form>
                         </div>
                     </div>
@@ -109,7 +118,6 @@
         </div>
         <div class="products">
             <div id="produ_list" class="row">
-               
             </div>
         </div>
     </div>
@@ -121,26 +129,59 @@
 <br>
 <br>
 
-<!-- <div class="container">
+<div class="container">
     <div class="row">
-        <div class="col-lg-3"></div>
-        <div class="col-lg-6">
-            <div class="form-group d-inline">
-                <input type="text" placeholder="To Do" id="toto_id">
-            </div>
-            <div class="form-group d-inline">
-                <input id="add_todo" type="submit" value="Add" class="btn btn-primary">
-            </div>
-            <div class="basic_todo">
-                <div class="list-group">
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h3>Add new devs</h3>
+                    <form id="devs_form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input name="name" type="text" class="form-control" placeholder="name">
+                        </div>
+                        <br>
+                        skill
+                        <hr>
+                        <div class="form-group">
+                            <input name="skills" value="React js Developer" type="checkbox">
+                            <label for="">React js Developer</label><br>
+                            <input name="skills" value="Laravel Developer" type="checkbox">
+                            <label for="">Laravel Developer</label><br>
+                            <input name="skills" value="Ios Developer" type="checkbox">
+                            <label for="">Ios Developer</label><br>
+                            <input name="skills" value="python Developer" type="checkbox">
+                            <label for="">python Developer</label><br>
+                        </div>
+                        <div class="form-group">
+                            <br>
+                            Gendar
+                            <hr>
+                            <input name="gander" value="male" type="radio">
+                            <label for="male">Male</label><br>
+                            <input name="gander" value="female" type="radio">
+                            <label for="female">female</label>
+                        </div>
+                        <div class="form-group">
+                            <br>
+                            <label for="photo">Photo</label>
+                            <input name="photo" type="text" class="form-control" placeholder="photo link">
+                        </div>
+                        <div class="form-group">
+                            <br>
+                            <input value="Add new devs" type="submit" class="btn btn-primary btn-block">
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-        <div class="col-lg-3">
+        <div class="col-md-9">
+            <div class="row show_devs_innerhtml">
+                
+            </div>
         </div>
     </div>
-</div> -->
-
+</div>
 <br>
 <br>
 <br>
@@ -150,6 +191,7 @@
 
 
 <script src="function.js"></script>
+<script src="team-members.js"></script>
 <script src="Bacsic-To-Do-2.js"></script>
 <script src="Product-with-LS.js"></script>
 <script src="age-calculaitor.js"></script>
