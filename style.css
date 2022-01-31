@@ -56,3 +56,10 @@ body{
     top: 0;
     right: -10px;
 }
+
+
+.close_btnn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}

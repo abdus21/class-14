@@ -7,68 +7,65 @@
 const devs_form = document.getElementById('devs_form');
 const show_devs_innerhtml = document.querySelector('.show_devs_innerhtml')
 
-
 devs_form.addEventListener('submit', function(e){
     e.preventDefault();
-    let devs_name = this.querySelector('input[name="name"]').value;
-    let devs_checkbox = this.querySelectorAll('input[name="skills"]:checked');
-    let devs_radio = this.querySelector('input[type="radio"]:checked');
-    let devs_photo = this.querySelector('input[name="photo"]').value;
+    let dev_name = this.querySelector('input[name="name"]');
+    let dev_skills = this.querySelectorAll('input[name="skills"]:checked');
+    let dev_gander = this.querySelector('input[name="gander"]:checked');
+    let dev_photo = this.querySelector('input[name="photo"]');
 
-    let devs_checkbox_value = [];
-    for (let i = 0; i < devs_checkbox.length; i++) {
-         devs_checkbox_value.push(devs_checkbox[i].value)  
-    };
+    let skills_arr = [];
+    for (let i = 0; i < dev_skills.length; i++) {
+        skills_arr.push( dev_skills[i].value);
+        
+    }
 
     let devs_arr;
-    if(dataget('devs')){
-        devs_arr = dataget('devs');
+    if(dataget('data_devs')){
+        devs_arr = dataget('data_devs')
     }else{
         devs_arr = [];
     }
 
     devs_arr.push({
-        devs_name     : devs_name,
-        devs_checkbo : devs_checkbox_value,
-        devs_radio    : devs_radio.value,
-        devs_photo    : devs_photo
-    })
-    datasend('devs', devs_arr);
-    //console.log(show_devs())
-    show_devs()
-    devs_name = '';
-});
+        dev_name   : dev_name.value,
+        skills_arr   : skills_arr,
+        dev_gander   : dev_gander.value,
+        dev_photo   : dev_photo.value
+    });
 
-show_devs();
-
-function show_devs(){
-    let send_data = dataget('devs');
+    datasend('data_devs', devs_arr)
+    show_data()
+})
 
 
-    let dataa = '';
-    send_data.map(data =>{
+
+show_data()
+function show_data(){
+    let all_data = dataget('data_devs')
+
+    let resive = '';
+    all_data.map(data =>{
 
         let list = '';
-        data.devs_checkbo.map(d =>{
+        data.skills_arr.map(d =>{
             list += '<li class="list-group-item">'+ d +'</li>'
-        });
-
-        dataa +=`<div class="col-md-4 my-3">
-        <div class="card">
-            <img style="width: 100%; height: 250px;object-fit: cover;" src="${data.devs_photo}" alt="">
-            <div class="card-body">
-                <h4>${data.devs_name}</h4>
-                Gendar : ${data.devs_radio}<br>
-                skills
-                <hr>
-                <div class="list-group">
-                ${list}
+        })
+        resive += `
+        <div class="col-md-4 my-3">
+                <div class="card">
+                    <img style="width: 100%; height: 250px;object-fit: cover;" src="${data.dev_photo}" alt="">
+                    <div class="card-body">
+                        <h4>${data.dev_name}</h4>
+                        Gendar : ${data.dev_gander}<br>
+                        skills
+                        <hr>
+                        <div class="list-group">
+                        ${list}
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>`
+            </div> `
     })
-    //show_devs_innerhtml
-    show_devs_innerhtml.innerHTML = dataa;
-
+    show_devs_innerhtml.innerHTML = resive;
 }

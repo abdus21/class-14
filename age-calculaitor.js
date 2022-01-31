@@ -3,10 +3,18 @@
  * Age calculator
  */
 
-const age_cal_form = document.querySelector('#age_cal_form');
+/**
+ * make a function for queryselector
+ * @param {*} value 
+ * @returns queryselector
+ */
+function id(value){
+    return document.querySelector(value);
+}
+//const age_cal_form = document.querySelector();
 const result_age = document.querySelector('.result_age');
 
-age_cal_form.addEventListener('submit', function(e){
+id('#age_cal_form').addEventListener('submit', function(e){
     e.preventDefault();
     
     let date2 = this.querySelector('input[type="date"]').value;
@@ -30,7 +38,7 @@ age_cal_form.addEventListener('submit', function(e){
     //let weeks_day = weeks - (total_day*24);
 
     let month = total_month - (total_years * 12); 
-    let day = total_day - (total_years * 12 * 30) - (total_month * 30);
+    let day = total_day - (total_years * 365 * 30) - (total_month * 30);
     let hours = total_hours -  (total_years * 12 * 30 * 24) - (total_month * 30 * 24) - (total_day * 24);
     let munite = total_munite -  (total_years * 12 * 30 * 24 * 60) - (total_month * 30 * 24 * 60) - (total_day * 24 * 60) - (total_hours * 60);
     let secound = total_secound -  (total_years * 12 * 30 * 24 * 60 * 60) - (total_month * 30 * 24 * 60 * 60) - (total_day * 24 * 60 * 60) - (total_hours * 60 * 60) - (total_munite * 60);
@@ -44,3 +52,4 @@ age_cal_form.addEventListener('submit', function(e){
 
 
 })
+

@@ -86,12 +86,12 @@ function show_product(){
     let all_product = dataget('products');
     
     let data = '';
-    all_product.map(d =>{
+    all_product.forEach(d =>{
     
         data += `<div class="col-md-3 my-3">
         <div class="card">
         <span class="massege">${d.select}</span>
-        <button class="close close_btnn position-absolute top-0 start-50 translate-middle-x">&times;</button>
+        <button class="close close_btnn">&times;</button>
             <img class="card-img" src="${d.photolink}">
             <div class="card-body">
                 <h5>${d.productname}</h5>

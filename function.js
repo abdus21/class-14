@@ -7,5 +7,5 @@ function datasend(key,value){
 
 function dataget(key){
     let data = localStorage.getItem(key);
-    return JSON.parse(data)
+    return JSON.parse(data) ? JSON.parse(data) : [];
 }
